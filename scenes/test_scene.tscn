@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://373suwe7143e"]
+
+[ext_resource type="PackedScene" uid="uid://bosewu6aaq4ji" path="res://scenes/character.tscn" id="1_g7g4h"]
+[ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="2_j8ivh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7g4h"]
+size = Vector2(200, 200)
+
+[node name="Island_1" type="Node2D" unique_id=2110042322]
+
+[node name="Character_1" parent="." unique_id=1767656700 instance=ExtResource("1_g7g4h")]
+position = Vector2(300, 200)
+
+[node name="Character_2" parent="." unique_id=143214845 instance=ExtResource("1_g7g4h")]
+position = Vector2(350, 200)
+
+[node name="GoalArea" type="Area2D" parent="." unique_id=439475753]
+position = Vector2(500, 200)
+script = ExtResource("2_j8ivh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea" unique_id=2037738812]
+shape = SubResource("RectangleShape2D_g7g4h")
