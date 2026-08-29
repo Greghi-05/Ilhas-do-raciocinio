@@ -14,6 +14,11 @@ config/name="Ilha do raciocinio"
 run/main_scene="uid://373suwe7143e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
