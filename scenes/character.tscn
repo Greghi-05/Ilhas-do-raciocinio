@@ -37,6 +37,7 @@ animations = [{
 }]
 
 [node name="Character" type="CharacterBody2D" unique_id=1767656700]
+input_pickable = true
 script = ExtResource("1_agfs1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=41815926]
