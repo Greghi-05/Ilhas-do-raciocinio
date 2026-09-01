@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_enum("apenas_porco", "tem_acessorio", "tem_oculos") var regra_do_caminho: String = "apenas_porco"
+@export_enum("apenas_porco", "tem_chapeu", "tem_oculos") var regra_do_caminho: String = "apenas_porco"
 
 @export var espacamento_fila: Vector2 = Vector2(60, 0) 
 var quantidade_na_fila: int = 0 
@@ -20,7 +20,7 @@ func _on_body_exited(body):
 func validar_personagem(body) -> bool:
 	if regra_do_caminho == "apenas_porco" and body.especie == "porco":
 		return true
-	elif regra_do_caminho == "tem_acessorio" and body.usa_acessorio_cabeca == true:
+	elif regra_do_caminho == "tem_chapeu" and body.usa_chapeu == true:
 		return true
 	elif regra_do_caminho == "tem_oculos" and body.usa_oculos == true:
 		return true

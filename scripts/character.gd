@@ -5,8 +5,8 @@ extends CharacterBody2D
 @export_enum("nenhuma", "azul", "vermelho", "verde", "amarelo", "roxo") var cor_oculos: String = "nenhuma"
 @export var usa_sapato: bool = false
 @export_enum("nenhuma", "azul", "vermelho", "verde", "amarelo", "roxo") var cor_sapato: String = "nenhuma"
-@export var usa_acessorio_cabeca: bool = false
-@export_enum("nenhuma", "azul", "vermelho", "verde", "amarelo", "roxo") var cor_acessorio_cabeca: String = "nenhuma"
+@export var usa_chapeu: bool = false
+@export_enum("nenhuma", "azul", "vermelho", "verde", "amarelo", "roxo") var cor_chapeu: String = "nenhuma"
 
 var esta_arrastando: bool = false
 var diferenca_mouse: Vector2 = Vector2.ZERO

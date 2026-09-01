@@ -1,24 +1,24 @@
 [gd_scene format=4 uid="uid://373suwe7143e"]
 
-[ext_resource type="PackedScene" uid="uid://bosewu6aaq4ji" path="res://scenes/character.tscn" id="1_g7g4h"]
-[ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="2_j8ivh"]
-[ext_resource type="Texture2D" uid="uid://d1f23glhxrdm7" path="res://tiles/Nature_Tileset.png" id="2_pln1h"]
-[ext_resource type="Texture2D" uid="uid://crfpsvo0mswre" path="res://tiles/Tileset_Floor_Detail.png" id="3_8gixj"]
-[ext_resource type="Texture2D" uid="uid://y3dr7mlko6fd" path="res://sprites/Porquinho 2.png" id="3_nd71p"]
-[ext_resource type="Texture2D" uid="uid://rcs1rww38aqq" path="res://tiles/Exterior_Tileset.png" id="3_u0xbq"]
-[ext_resource type="Texture2D" uid="uid://cqsrgmtw1d6qo" path="res://sprites/Porquinho 3.png" id="4_7ddre"]
-[ext_resource type="Texture2D" uid="uid://c74wk1psskvhi" path="res://sprites/Gatinho 1.png" id="5_qjeyg"]
-[ext_resource type="Texture2D" uid="uid://cdcwukbljpdmp" path="res://sprites/Gatinho 2.png" id="6_3qnke"]
-[ext_resource type="Texture2D" uid="uid://dkv336er787q2" path="res://sprites/Pintinho 1.png" id="7_wtsjf"]
-[ext_resource type="Texture2D" uid="uid://c7jr7u5ukb2eh" path="res://sprites/Sapinho 1.png" id="8_rnaij"]
-[ext_resource type="Texture2D" uid="uid://b1d4ne7i4j28g" path="res://sprites/Ursinho 1.png" id="9_gthg3"]
-[ext_resource type="Texture2D" uid="uid://bvmb7tawxpj86" path="res://sprites/Ursinho 2.png" id="10_ntc4i"]
-[ext_resource type="Texture2D" uid="uid://b1f8o4w152un2" path="res://sprites/Vaquinha 1.png" id="11_u0xbq"]
-[ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Vaquinha 2 .png" id="12_pln1h"]
-[ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="13_ntc4i"]
+[ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="1_m7v2g"]
+[ext_resource type="Texture2D" uid="uid://crfpsvo0mswre" path="res://tiles/Tileset_Floor_Detail.png" id="2_mlye1"]
+[ext_resource type="Texture2D" uid="uid://d1f23glhxrdm7" path="res://tiles/Nature_Tileset.png" id="3_a1gjd"]
+[ext_resource type="PackedScene" uid="uid://bosewu6aaq4ji" path="res://scenes/character.tscn" id="4_u7ucq"]
+[ext_resource type="Texture2D" uid="uid://y3dr7mlko6fd" path="res://sprites/Porquinho 2.png" id="5_xwfau"]
+[ext_resource type="Texture2D" uid="uid://cqsrgmtw1d6qo" path="res://sprites/Porquinho 3.png" id="6_r5fkv"]
+[ext_resource type="Texture2D" uid="uid://c74wk1psskvhi" path="res://sprites/Gatinho 1.png" id="7_mopwt"]
+[ext_resource type="Texture2D" uid="uid://cdcwukbljpdmp" path="res://sprites/Gatinho 2.png" id="8_odcxm"]
+[ext_resource type="Texture2D" uid="uid://dkv336er787q2" path="res://sprites/Pintinho 1.png" id="9_8xr4j"]
+[ext_resource type="Texture2D" uid="uid://c7jr7u5ukb2eh" path="res://sprites/Sapinho 1.png" id="10_m5vsw"]
+[ext_resource type="Texture2D" uid="uid://b1d4ne7i4j28g" path="res://sprites/Ursinho 1.png" id="11_laj21"]
+[ext_resource type="Texture2D" uid="uid://bvmb7tawxpj86" path="res://sprites/Ursinho 2.png" id="12_dov25"]
+[ext_resource type="Texture2D" uid="uid://b1f8o4w152un2" path="res://sprites/Vaquinha 1.png" id="13_ygm7u"]
+[ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Vaquinha 2 .png" id="14_7nk2b"]
+[ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="15_bxejt"]
+[ext_resource type="Texture2D" uid="uid://rcs1rww38aqq" path="res://tiles/Exterior_Tileset.png" id="16_4w6g1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntc4i"]
-texture = ExtResource("13_ntc4i")
+texture = ExtResource("1_m7v2g")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -165,7 +165,7 @@ physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_ntc4i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pln1h"]
-texture = ExtResource("3_8gixj")
+texture = ExtResource("2_mlye1")
 1:1/0 = 0
 1:1/0/texture_origin = Vector2i(13, 7)
 1:2/0 = 0
@@ -221,7 +221,7 @@ physics_layer_0/collision_priority = 3.0
 sources/4 = SubResource("TileSetAtlasSource_pln1h")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gixj"]
-texture = ExtResource("2_pln1h")
+texture = ExtResource("3_a1gjd")
 2:1/0 = 0
 3:1/0 = 0
 3:2/0 = 0
@@ -267,15 +267,15 @@ texture = ExtResource("2_pln1h")
 sources/0 = SubResource("TileSetAtlasSource_8gixj")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ddre"]
-atlas = ExtResource("3_nd71p")
+atlas = ExtResource("5_xwfau")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjeyg"]
-atlas = ExtResource("3_nd71p")
+atlas = ExtResource("5_xwfau")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3qnke"]
-atlas = ExtResource("3_nd71p")
+atlas = ExtResource("5_xwfau")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j8ivh"]
@@ -296,15 +296,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtsjf"]
-atlas = ExtResource("4_7ddre")
+atlas = ExtResource("6_r5fkv")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
-atlas = ExtResource("4_7ddre")
+atlas = ExtResource("6_r5fkv")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3xc6"]
-atlas = ExtResource("4_7ddre")
+atlas = ExtResource("6_r5fkv")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nd71p"]
@@ -325,15 +325,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s36qc"]
-atlas = ExtResource("5_qjeyg")
+atlas = ExtResource("7_mopwt")
 region = Rect2(0, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qxox"]
-atlas = ExtResource("5_qjeyg")
+atlas = ExtResource("7_mopwt")
 region = Rect2(48, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gthg3"]
-atlas = ExtResource("5_qjeyg")
+atlas = ExtResource("7_mopwt")
 region = Rect2(96, 0, 48, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ntc4i"]
@@ -354,15 +354,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntc4i"]
-atlas = ExtResource("6_3qnke")
+atlas = ExtResource("8_odcxm")
 region = Rect2(0, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0xbq"]
-atlas = ExtResource("6_3qnke")
+atlas = ExtResource("8_odcxm")
 region = Rect2(48, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pln1h"]
-atlas = ExtResource("6_3qnke")
+atlas = ExtResource("8_odcxm")
 region = Rect2(96, 0, 48, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8gixj"]
@@ -383,15 +383,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gixj"]
-atlas = ExtResource("7_wtsjf")
+atlas = ExtResource("9_8xr4j")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hf2sn"]
-atlas = ExtResource("7_wtsjf")
+atlas = ExtResource("9_8xr4j")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq5q4"]
-atlas = ExtResource("7_wtsjf")
+atlas = ExtResource("9_8xr4j")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gah1j"]
@@ -412,15 +412,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gah1j"]
-atlas = ExtResource("8_rnaij")
+atlas = ExtResource("10_m5vsw")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ap2hy"]
-atlas = ExtResource("8_rnaij")
+atlas = ExtResource("10_m5vsw")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nlwlv"]
-atlas = ExtResource("8_rnaij")
+atlas = ExtResource("10_m5vsw")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6gkjt"]
@@ -441,15 +441,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6gkjt"]
-atlas = ExtResource("9_gthg3")
+atlas = ExtResource("11_laj21")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmrlb"]
-atlas = ExtResource("9_gthg3")
+atlas = ExtResource("11_laj21")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nks25"]
-atlas = ExtResource("9_gthg3")
+atlas = ExtResource("11_laj21")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kub5s"]
@@ -470,15 +470,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afgys"]
-atlas = ExtResource("10_ntc4i")
+atlas = ExtResource("12_dov25")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sstcd"]
-atlas = ExtResource("10_ntc4i")
+atlas = ExtResource("12_dov25")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2oq4n"]
-atlas = ExtResource("10_ntc4i")
+atlas = ExtResource("12_dov25")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnteq"]
@@ -499,15 +499,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oimyc"]
-atlas = ExtResource("11_u0xbq")
+atlas = ExtResource("13_ygm7u")
 region = Rect2(0, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5csvr"]
-atlas = ExtResource("11_u0xbq")
+atlas = ExtResource("13_ygm7u")
 region = Rect2(48, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fftn7"]
-atlas = ExtResource("11_u0xbq")
+atlas = ExtResource("13_ygm7u")
 region = Rect2(96, 0, 48, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_68ann"]
@@ -528,15 +528,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lljex"]
-atlas = ExtResource("12_pln1h")
+atlas = ExtResource("14_7nk2b")
 region = Rect2(0, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phh8q"]
-atlas = ExtResource("12_pln1h")
+atlas = ExtResource("14_7nk2b")
 region = Rect2(48, 0, 48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j5sap"]
-atlas = ExtResource("12_pln1h")
+atlas = ExtResource("14_7nk2b")
 region = Rect2(96, 0, 48, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqlge"]
@@ -583,7 +583,7 @@ tile_set = SubResource("TileSet_qq5q4")
 
 [node name="Characters" type="Node2D" parent="." unique_id=1474190014]
 
-[node name="Character" parent="Characters" unique_id=1767656700 instance=ExtResource("1_g7g4h")]
+[node name="Character" parent="Characters" unique_id=1767656700 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(432, 720)
 
@@ -592,7 +592,7 @@ scale = Vector2(2, 2)
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character2" parent="Characters" unique_id=159513721 instance=ExtResource("1_g7g4h")]
+[node name="Character2" parent="Characters" unique_id=159513721 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(796, 726)
 usa_sapato = true
@@ -604,7 +604,7 @@ sprite_frames = SubResource("SpriteFrames_j8ivh")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character3" parent="Characters" unique_id=2021828697 instance=ExtResource("1_g7g4h")]
+[node name="Character3" parent="Characters" unique_id=2021828697 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(391, 807)
 usa_sapato = true
@@ -617,7 +617,7 @@ sprite_frames = SubResource("SpriteFrames_nd71p")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character4" parent="Characters" unique_id=1227920581 instance=ExtResource("1_g7g4h")]
+[node name="Character4" parent="Characters" unique_id=1227920581 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(954, 798)
 
@@ -626,12 +626,12 @@ scale = Vector2(2, 2)
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character5" parent="Characters" unique_id=636665979 instance=ExtResource("1_g7g4h")]
+[node name="Character5" parent="Characters" unique_id=636665979 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(874, 932)
 especie = "gato"
-usa_acessorio_cabeca = true
-cor_acessorio_cabeca = "roxo"
+usa_chapeu = true
+cor_chapeu = "roxo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character5" index="1" unique_id=641548224]
 position = Vector2(0, -7)
@@ -640,7 +640,7 @@ sprite_frames = SubResource("SpriteFrames_ntc4i")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character6" parent="Characters" unique_id=398989724 instance=ExtResource("1_g7g4h")]
+[node name="Character6" parent="Characters" unique_id=398989724 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(510, 786)
 especie = "gato"
@@ -654,12 +654,12 @@ sprite_frames = SubResource("SpriteFrames_8gixj")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character7" parent="Characters" unique_id=151147776 instance=ExtResource("1_g7g4h")]
+[node name="Character7" parent="Characters" unique_id=151147776 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(672, 819)
 especie = "pinto"
-usa_acessorio_cabeca = true
-cor_acessorio_cabeca = "amarelo"
+usa_chapeu = true
+cor_chapeu = "amarelo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character7" index="1" unique_id=641548224]
 scale = Vector2(2, 2)
@@ -667,7 +667,7 @@ sprite_frames = SubResource("SpriteFrames_gah1j")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character8" parent="Characters" unique_id=1986772363 instance=ExtResource("1_g7g4h")]
+[node name="Character8" parent="Characters" unique_id=1986772363 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(704, 672)
 especie = "sapo"
@@ -680,12 +680,12 @@ sprite_frames = SubResource("SpriteFrames_6gkjt")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character9" parent="Characters" unique_id=864935000 instance=ExtResource("1_g7g4h")]
+[node name="Character9" parent="Characters" unique_id=864935000 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(449, 937)
 especie = "urso"
-usa_acessorio_cabeca = true
-cor_acessorio_cabeca = "verde"
+usa_chapeu = true
+cor_chapeu = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character9" index="1" unique_id=641548224]
 scale = Vector2(2, 2)
@@ -693,7 +693,7 @@ sprite_frames = SubResource("SpriteFrames_kub5s")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character10" parent="Characters" unique_id=1960526032 instance=ExtResource("1_g7g4h")]
+[node name="Character10" parent="Characters" unique_id=1960526032 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(905, 687)
 especie = "urso"
@@ -706,13 +706,14 @@ sprite_frames = SubResource("SpriteFrames_bnteq")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character11" parent="Characters" unique_id=388934614 instance=ExtResource("1_g7g4h")]
+[node name="Character11" parent="Characters" unique_id=388934614 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(550, 684)
 especie = "vaca"
 usa_sapato = true
 cor_sapato = "azul"
-usa_acessorio_cabeca = true
+usa_chapeu = true
+cor_chapeu = "vermelho"
 
 [node name="AnimatedSprite2D" parent="Characters/Character11" index="1" unique_id=641548224]
 position = Vector2(0, -9)
@@ -721,7 +722,7 @@ sprite_frames = SubResource("SpriteFrames_68ann")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="Character12" parent="Characters" unique_id=1785334637 instance=ExtResource("1_g7g4h")]
+[node name="Character12" parent="Characters" unique_id=1785334637 instance=ExtResource("4_u7ucq")]
 z_index = 1
 position = Vector2(730, 914)
 especie = "vaca"
@@ -737,19 +738,55 @@ sprite_frames = SubResource("SpriteFrames_kqlge")
 autoplay = "idle"
 frame_progress = 0.0
 
-[node name="GoalArea" type="Area2D" parent="." unique_id=439475753]
-position = Vector2(124, 163)
-script = ExtResource("2_j8ivh")
+[node name="Caminhos" type="Node2D" parent="." unique_id=1420147925]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea" unique_id=2037738812]
+[node name="GoalArea" type="Area2D" parent="Caminhos" unique_id=439475753]
+position = Vector2(124, 163)
+script = ExtResource("15_bxejt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea" unique_id=2037738812]
 position = Vector2(15, -6)
 shape = SubResource("RectangleShape2D_g7g4h")
 
-[node name="Sprite2D" type="Sprite2D" parent="GoalArea" unique_id=513785295]
+[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea" unique_id=513785295]
 texture_filter = 1
 position = Vector2(15, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("3_u0xbq")
+texture = ExtResource("16_4w6g1")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="GoalArea2" type="Area2D" parent="Caminhos" unique_id=488500534]
+position = Vector2(1119, 632)
+script = ExtResource("15_bxejt")
+regra_do_caminho = "tem_chapeu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea2" unique_id=851526904]
+position = Vector2(15, -6)
+shape = SubResource("RectangleShape2D_g7g4h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea2" unique_id=1027163609]
+texture_filter = 1
+position = Vector2(15, -8)
+scale = Vector2(4, 4)
+texture = ExtResource("16_4w6g1")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="GoalArea3" type="Area2D" parent="Caminhos" unique_id=743259613]
+position = Vector2(1374, 361)
+script = ExtResource("15_bxejt")
+regra_do_caminho = "tem_oculos"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=1480937373]
+position = Vector2(15, -6)
+shape = SubResource("RectangleShape2D_g7g4h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea3" unique_id=953116800]
+texture_filter = 1
+position = Vector2(15, -8)
+scale = Vector2(4, 4)
+texture = ExtResource("16_4w6g1")
 region_enabled = true
 region_rect = Rect2(16, 48, 16, 16)
 
