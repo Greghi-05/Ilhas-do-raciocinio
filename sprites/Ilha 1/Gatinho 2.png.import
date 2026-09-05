@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1f8o4w152un2"
-path="res://.godot/imported/Vaquinha 1.png-f92ba24c48717ba1e3ba09f1483dd02d.ctex"
+uid="uid://cdcwukbljpdmp"
+path="res://.godot/imported/Gatinho 2.png-d7727c74d011ab1bb448a816eb66379f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Vaquinha 1.png"
-dest_files=["res://.godot/imported/Vaquinha 1.png-f92ba24c48717ba1e3ba09f1483dd02d.ctex"]
+source_file="res://sprites/Ilha 1/Gatinho 2.png"
+dest_files=["res://.godot/imported/Gatinho 2.png-d7727c74d011ab1bb448a816eb66379f.ctex"]
 
 [params]
 

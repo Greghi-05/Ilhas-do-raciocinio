@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bosewu6aaq4ji"]
 
 [ext_resource type="Script" uid="uid://d3vy4dwis58uh" path="res://scripts/character.gd" id="1_agfs1"]
-[ext_resource type="Texture2D" uid="uid://blr1kpb0naq54" path="res://sprites/Porquinho 1.png" id="2_rkhd4"]
+[ext_resource type="Texture2D" uid="uid://blr1kpb0naq54" path="res://sprites/Ilha 1/Porquinho 1.png" id="2_rkhd4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lrhn5"]
-radius = 24.0
-height = 62.0
+radius = 45.0
+height = 106.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_my7n2"]
 atlas = ExtResource("2_rkhd4")

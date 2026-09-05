@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqsrgmtw1d6qo"
-path="res://.godot/imported/Porquinho 3.png-468c16d921840399063cafbb30c9d7fd.ctex"
+uid="uid://dkv336er787q2"
+path="res://.godot/imported/Pintinho 1.png-f1a90bb69e5f256243e5a1766b46d4b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Porquinho 3.png"
-dest_files=["res://.godot/imported/Porquinho 3.png-468c16d921840399063cafbb30c9d7fd.ctex"]
+source_file="res://sprites/Ilha 1/Pintinho 1.png"
+dest_files=["res://.godot/imported/Pintinho 1.png-f1a90bb69e5f256243e5a1766b46d4b3.ctex"]
 
 [params]
 

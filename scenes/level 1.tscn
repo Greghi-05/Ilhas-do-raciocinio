@@ -1,21 +1,22 @@
 [gd_scene format=4 uid="uid://373suwe7143e"]
 
 [ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="1_m7v2g"]
+[ext_resource type="Texture2D" uid="uid://bsx0x6ho1r6t1" path="res://tiles/Water.jpg" id="1_mlye1"]
 [ext_resource type="Texture2D" uid="uid://crfpsvo0mswre" path="res://tiles/Tileset_Floor_Detail.png" id="2_mlye1"]
 [ext_resource type="Texture2D" uid="uid://d1f23glhxrdm7" path="res://tiles/Nature_Tileset.png" id="3_a1gjd"]
 [ext_resource type="PackedScene" uid="uid://bosewu6aaq4ji" path="res://scenes/character.tscn" id="4_u7ucq"]
-[ext_resource type="Texture2D" uid="uid://y3dr7mlko6fd" path="res://sprites/Porquinho 2.png" id="5_xwfau"]
-[ext_resource type="Texture2D" uid="uid://cqsrgmtw1d6qo" path="res://sprites/Porquinho 3.png" id="6_r5fkv"]
-[ext_resource type="Texture2D" uid="uid://c74wk1psskvhi" path="res://sprites/Gatinho 1.png" id="7_mopwt"]
-[ext_resource type="Texture2D" uid="uid://cdcwukbljpdmp" path="res://sprites/Gatinho 2.png" id="8_odcxm"]
-[ext_resource type="Texture2D" uid="uid://dkv336er787q2" path="res://sprites/Pintinho 1.png" id="9_8xr4j"]
-[ext_resource type="Texture2D" uid="uid://c7jr7u5ukb2eh" path="res://sprites/Sapinho 1.png" id="10_m5vsw"]
-[ext_resource type="Texture2D" uid="uid://b1d4ne7i4j28g" path="res://sprites/Ursinho 1.png" id="11_laj21"]
-[ext_resource type="Texture2D" uid="uid://bvmb7tawxpj86" path="res://sprites/Ursinho 2.png" id="12_dov25"]
-[ext_resource type="Texture2D" uid="uid://b1f8o4w152un2" path="res://sprites/Vaquinha 1.png" id="13_ygm7u"]
-[ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Vaquinha 2 .png" id="14_7nk2b"]
+[ext_resource type="Texture2D" uid="uid://y3dr7mlko6fd" path="res://sprites/Ilha 1/Porquinho 2.png" id="5_xwfau"]
+[ext_resource type="Texture2D" uid="uid://cqsrgmtw1d6qo" path="res://sprites/Ilha 1/Porquinho 3.png" id="6_r5fkv"]
+[ext_resource type="Texture2D" uid="uid://c74wk1psskvhi" path="res://sprites/Ilha 1/Gatinho 1.png" id="7_mopwt"]
+[ext_resource type="Texture2D" uid="uid://cdcwukbljpdmp" path="res://sprites/Ilha 1/Gatinho 2.png" id="8_odcxm"]
+[ext_resource type="Texture2D" uid="uid://dkv336er787q2" path="res://sprites/Ilha 1/Pintinho 1.png" id="9_8xr4j"]
+[ext_resource type="Texture2D" uid="uid://c7jr7u5ukb2eh" path="res://sprites/Ilha 1/Sapinho 1.png" id="10_m5vsw"]
+[ext_resource type="Texture2D" uid="uid://b1d4ne7i4j28g" path="res://sprites/Ilha 1/Ursinho 1.png" id="11_laj21"]
+[ext_resource type="Texture2D" uid="uid://bvmb7tawxpj86" path="res://sprites/Ilha 1/Ursinho 2.png" id="12_dov25"]
+[ext_resource type="Texture2D" uid="uid://b1f8o4w152un2" path="res://sprites/Ilha 1/Vaquinha 1.png" id="13_ygm7u"]
+[ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Ilha 1/Vaquinha 2 .png" id="14_7nk2b"]
 [ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="15_bxejt"]
-[ext_resource type="Texture2D" uid="uid://rcs1rww38aqq" path="res://tiles/Exterior_Tileset.png" id="16_4w6g1"]
+[ext_resource type="Texture2D" uid="uid://bm5pi545gk3ug" path="res://sprites/Placa de caminho.png" id="17_a1gjd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntc4i"]
 texture = ExtResource("1_m7v2g")
@@ -557,9 +558,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7g4h"]
-size = Vector2(54, 60)
+size = Vector2(176, 140)
 
 [node name="Island_1" type="Node2D" unique_id=2110042322]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=426600917]
+position = Vector2(960, 540)
+scale = Vector2(0.69, 0.71)
+texture = ExtResource("1_mlye1")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=1190134292]
 
@@ -587,8 +593,11 @@ tile_set = SubResource("TileSet_qq5q4")
 z_index = 1
 position = Vector2(432, 720)
 
+[node name="CollisionShape2D" parent="Characters/Character" index="0" unique_id=41815926]
+position = Vector2(2, 0)
+
 [node name="AnimatedSprite2D" parent="Characters/Character" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 autoplay = "idle"
 frame_progress = 0.0
 
@@ -599,20 +608,20 @@ usa_sapato = true
 cor_sapato = "azul"
 
 [node name="AnimatedSprite2D" parent="Characters/Character2" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_j8ivh")
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character3" parent="Characters" unique_id=2021828697 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(391, 807)
+position = Vector2(391, 822)
 usa_sapato = true
 cor_sapato = "vermelho"
 
 [node name="AnimatedSprite2D" parent="Characters/Character3" index="1" unique_id=641548224]
 position = Vector2(0, -1)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_nd71p")
 autoplay = "idle"
 frame_progress = 0.0
@@ -622,20 +631,20 @@ z_index = 1
 position = Vector2(954, 798)
 
 [node name="AnimatedSprite2D" parent="Characters/Character4" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character5" parent="Characters" unique_id=636665979 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(874, 932)
+position = Vector2(875, 925)
 especie = "gato"
 usa_chapeu = true
 cor_chapeu = "roxo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character5" index="1" unique_id=641548224]
 position = Vector2(0, -7)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_ntc4i")
 autoplay = "idle"
 frame_progress = 0.0
@@ -649,20 +658,20 @@ cor_oculos = "azul"
 
 [node name="AnimatedSprite2D" parent="Characters/Character6" index="1" unique_id=641548224]
 position = Vector2(0, -8)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8gixj")
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character7" parent="Characters" unique_id=151147776 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(672, 819)
+position = Vector2(698, 789)
 especie = "pinto"
 usa_chapeu = true
 cor_chapeu = "amarelo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character7" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_gah1j")
 autoplay = "idle"
 frame_progress = 0.0
@@ -675,20 +684,20 @@ usa_oculos = true
 cor_oculos = "amarelo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character8" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_6gkjt")
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character9" parent="Characters" unique_id=864935000 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(449, 937)
+position = Vector2(452, 931)
 especie = "urso"
 usa_chapeu = true
 cor_chapeu = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character9" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kub5s")
 autoplay = "idle"
 frame_progress = 0.0
@@ -701,14 +710,14 @@ usa_oculos = true
 cor_oculos = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character10" index="1" unique_id=641548224]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bnteq")
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character11" parent="Characters" unique_id=388934614 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(550, 684)
+position = Vector2(548, 674)
 especie = "vaca"
 usa_sapato = true
 cor_sapato = "azul"
@@ -717,14 +726,14 @@ cor_chapeu = "vermelho"
 
 [node name="AnimatedSprite2D" parent="Characters/Character11" index="1" unique_id=641548224]
 position = Vector2(0, -9)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_68ann")
 autoplay = "idle"
 frame_progress = 0.0
 
 [node name="Character12" parent="Characters" unique_id=1785334637 instance=ExtResource("4_u7ucq")]
 z_index = 1
-position = Vector2(730, 914)
+position = Vector2(737, 926)
 especie = "vaca"
 usa_oculos = true
 cor_oculos = "vermelho"
@@ -733,7 +742,7 @@ cor_sapato = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character12" index="1" unique_id=641548224]
 position = Vector2(0, -9)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kqlge")
 autoplay = "idle"
 frame_progress = 0.0
@@ -741,54 +750,63 @@ frame_progress = 0.0
 [node name="Caminhos" type="Node2D" parent="." unique_id=1420147925]
 
 [node name="GoalArea" type="Area2D" parent="Caminhos" unique_id=439475753]
-position = Vector2(124, 163)
+position = Vector2(1132, 604)
 script = ExtResource("15_bxejt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea" unique_id=2037738812]
-position = Vector2(15, -6)
-shape = SubResource("RectangleShape2D_g7g4h")
+espacamento_fila = Vector2(80, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea" unique_id=513785295]
 texture_filter = 1
 position = Vector2(15, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("16_4w6g1")
-region_enabled = true
+texture = ExtResource("17_a1gjd")
 region_rect = Rect2(16, 48, 16, 16)
 
-[node name="GoalArea2" type="Area2D" parent="Caminhos" unique_id=488500534]
-position = Vector2(1119, 632)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea" unique_id=2037738812]
+position = Vector2(15, -8)
+shape = SubResource("RectangleShape2D_g7g4h")
+
+[node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea" unique_id=1067976938]
+position = Vector2(17, 60)
+
+[node name="GoalArea2" type="Area2D" parent="Caminhos" unique_id=898011325]
+position = Vector2(129, 172)
 script = ExtResource("15_bxejt")
 regra_do_caminho = "tem_chapeu"
+espacamento_fila = Vector2(80, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea2" unique_id=851526904]
-position = Vector2(15, -6)
-shape = SubResource("RectangleShape2D_g7g4h")
-
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea2" unique_id=1027163609]
+[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea2" unique_id=1222649526]
 texture_filter = 1
 position = Vector2(15, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("16_4w6g1")
-region_enabled = true
+texture = ExtResource("17_a1gjd")
 region_rect = Rect2(16, 48, 16, 16)
 
-[node name="GoalArea3" type="Area2D" parent="Caminhos" unique_id=743259613]
-position = Vector2(1374, 361)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea2" unique_id=1734982184]
+position = Vector2(15, -8)
+shape = SubResource("RectangleShape2D_g7g4h")
+
+[node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea2" unique_id=1974567717]
+position = Vector2(17, 60)
+
+[node name="GoalArea3" type="Area2D" parent="Caminhos" unique_id=1164240138]
+position = Vector2(1389, 319)
 script = ExtResource("15_bxejt")
 regra_do_caminho = "tem_oculos"
+espacamento_fila = Vector2(80, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=1480937373]
-position = Vector2(15, -6)
-shape = SubResource("RectangleShape2D_g7g4h")
-
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea3" unique_id=953116800]
+[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea3" unique_id=1051513355]
 texture_filter = 1
 position = Vector2(15, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("16_4w6g1")
-region_enabled = true
+texture = ExtResource("17_a1gjd")
 region_rect = Rect2(16, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=1801481656]
+position = Vector2(15, -8)
+shape = SubResource("RectangleShape2D_g7g4h")
+
+[node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea3" unique_id=2007873155]
+position = Vector2(17, 60)
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

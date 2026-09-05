@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y3dr7mlko6fd"
-path="res://.godot/imported/Porquinho 2.png-e420a6fce5c30625d250dfc86dfe5f5a.ctex"
+uid="uid://duper5mrmsfhf"
+path="res://.godot/imported/Vaquinha 2 .png-ec00832f63c38e31780e248346eaccb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Porquinho 2.png"
-dest_files=["res://.godot/imported/Porquinho 2.png-e420a6fce5c30625d250dfc86dfe5f5a.ctex"]
+source_file="res://sprites/Ilha 1/Vaquinha 2 .png"
+dest_files=["res://.godot/imported/Vaquinha 2 .png-ec00832f63c38e31780e248346eaccb6.ctex"]
 
 [params]
 

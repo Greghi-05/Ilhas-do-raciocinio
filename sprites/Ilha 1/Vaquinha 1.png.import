@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmb7tawxpj86"
-path="res://.godot/imported/Ursinho 2.png-61954680046302eac2c1409dbb6a7fd0.ctex"
+uid="uid://b1f8o4w152un2"
+path="res://.godot/imported/Vaquinha 1.png-9b188b66a658c3ac2d1796fe9b74af12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ursinho 2.png"
-dest_files=["res://.godot/imported/Ursinho 2.png-61954680046302eac2c1409dbb6a7fd0.ctex"]
+source_file="res://sprites/Ilha 1/Vaquinha 1.png"
+dest_files=["res://.godot/imported/Vaquinha 1.png-9b188b66a658c3ac2d1796fe9b74af12.ctex"]
 
 [params]
 

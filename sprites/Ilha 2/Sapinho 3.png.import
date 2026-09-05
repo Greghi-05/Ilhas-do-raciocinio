@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duper5mrmsfhf"
-path="res://.godot/imported/Vaquinha 2 .png-c2266ee6dffc890d5c25a2d1f7d8caaf.ctex"
+uid="uid://bkfb3rskmogax"
+path="res://.godot/imported/Sapinho 3.png-27bd384f768d96e09018345cd6be8e7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Vaquinha 2 .png"
-dest_files=["res://.godot/imported/Vaquinha 2 .png-c2266ee6dffc890d5c25a2d1f7d8caaf.ctex"]
+source_file="res://sprites/Ilha 2/Sapinho 3.png"
+dest_files=["res://.godot/imported/Sapinho 3.png-27bd384f768d96e09018345cd6be8e7a.ctex"]
 
 [params]
 
