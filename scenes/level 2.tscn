@@ -767,6 +767,7 @@ usa_chapeu = true
 cor_chapeu = "vermelho"
 
 [node name="AnimatedSprite2D" parent="Characters/Character4" index="1" unique_id=641548224]
+position = Vector2(0, -7)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_xq5uh")
 autoplay = "idle"
@@ -798,6 +799,7 @@ usa_chapeu = true
 cor_chapeu = "vermelho"
 
 [node name="AnimatedSprite2D" parent="Characters/Character6" index="1" unique_id=641548224]
+position = Vector2(0, -10)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_qbiht")
 autoplay = "idle"
@@ -812,7 +814,7 @@ usa_chapeu = true
 cor_chapeu = "roxo"
 
 [node name="AnimatedSprite2D" parent="Characters/Character7" index="1" unique_id=641548224]
-position = Vector2(0, -15)
+position = Vector2(0, -21)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_sc5de")
 autoplay = "idle"
@@ -899,7 +901,7 @@ usa_chapeu = true
 cor_chapeu = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character13" index="1" unique_id=641548224]
-position = Vector2(0, -5)
+position = Vector2(0, -10)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_vnw88")
 autoplay = "idle"
@@ -929,6 +931,7 @@ usa_chapeu = true
 cor_chapeu = "verde"
 
 [node name="AnimatedSprite2D" parent="Characters/Character15" index="1" unique_id=641548224]
+position = Vector2(0, -10)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_gn2et")
 autoplay = "idle"
@@ -994,7 +997,7 @@ position = Vector2(15, -8)
 shape = SubResource("RectangleShape2D_5a11g")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea3" unique_id=321779684]
-position = Vector2(17, 60)
+position = Vector2(87, 35)
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

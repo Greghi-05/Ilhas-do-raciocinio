@@ -14,8 +14,14 @@ var posicao_inicial: Vector2
 var caminho_atual = null 
 var foi_resolvido: bool = false 
 
+var imagem_seta = preload("res://seta.png")
+var imagem_mao = preload("res://mao.png")
+
 func _ready():
 	posicao_inicial = global_position
+	
+	Input.set_custom_mouse_cursor(imagem_seta, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(imagem_mao, Input.CURSOR_DRAG, Vector2(0, 0))
 
 func _input_event(viewport, event, shape_idx):
 	if foi_resolvido: return 
@@ -24,11 +30,13 @@ func _input_event(viewport, event, shape_idx):
 		if event.pressed: 
 			esta_arrastando = true
 			diferenca_mouse = global_position - get_global_mouse_position()
+			Input.set_default_cursor_shape(Input.CURSOR_DRAG)
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not event.pressed and esta_arrastando:
 			esta_arrastando = false
+			Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 			
 			if caminho_atual != null:
 				if caminho_atual.validar_personagem(self) == true:
