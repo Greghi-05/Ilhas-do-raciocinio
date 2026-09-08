@@ -43,6 +43,7 @@ func _input(event):
 					global_position = caminho_atual.entrar_na_fila()
 					foi_resolvido = true 
 					print(especie, " passou no caminho e entrou na fila!")
+					get_tree().current_scene.registrar_acerto()
 				else:
 					global_position = posicao_inicial
 					print(especie, " foi rejeitado!")

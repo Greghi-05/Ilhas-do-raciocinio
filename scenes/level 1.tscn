@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://373suwe7143e"]
 
+[ext_resource type="Script" uid="uid://b1m27mkot5cio" path="res://scripts/level_up.gd" id="1_a1gjd"]
 [ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="1_m7v2g"]
 [ext_resource type="Texture2D" uid="uid://bsx0x6ho1r6t1" path="res://tiles/Water.jpg" id="1_mlye1"]
 [ext_resource type="Texture2D" uid="uid://crfpsvo0mswre" path="res://tiles/Tileset_Floor_Detail.png" id="2_mlye1"]
@@ -561,6 +562,8 @@ animations = [{
 size = Vector2(176, 140)
 
 [node name="Island_1" type="Node2D" unique_id=2110042322]
+script = ExtResource("1_a1gjd")
+personagens_necessarios = 12
 
 [node name="Background" type="Sprite2D" parent="." unique_id=426600917]
 position = Vector2(960, 540)
