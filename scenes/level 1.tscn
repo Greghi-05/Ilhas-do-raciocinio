@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Ilha 1/Vaquinha 2 .png" id="14_7nk2b"]
 [ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="15_bxejt"]
 [ext_resource type="Texture2D" uid="uid://bm5pi545gk3ug" path="res://sprites/Placa de caminho.png" id="17_a1gjd"]
+[ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="19_u7ucq"]
+[ext_resource type="Shader" uid="uid://b260ekimk8ki0" path="res://scenes/level 1.gdshader" id="19_xwfau"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntc4i"]
 texture = ExtResource("1_m7v2g")
@@ -561,9 +563,39 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7g4h"]
 size = Vector2(176, 140)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r5fkv"]
+shader = ExtResource("19_xwfau")
+shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
+shader_parameter/velocidade = 1.5
+shader_parameter/tamanho_faixa = 0.2
+shader_parameter/inclinacao = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwfau"]
+bg_color = Color(0.95686275, 0.9098039, 0.75686276, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.84313726, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.5882353)
+shadow_size = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xwfau"]
+shader = ExtResource("19_xwfau")
+shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
+shader_parameter/velocidade = 1.5
+shader_parameter/tamanho_faixa = 0.2
+shader_parameter/inclinacao = 0.5
+
 [node name="Island_1" type="Node2D" unique_id=2110042322]
 script = ExtResource("1_a1gjd")
 personagens_necessarios = 12
+proxima_fase = "res://scenes/level 2.tscn"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=426600917]
 position = Vector2(960, 540)
@@ -810,6 +842,68 @@ shape = SubResource("RectangleShape2D_g7g4h")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea3" unique_id=2007873155]
 position = Vector2(17, 60)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=134663702]
+
+[node name="AvisoB" type="Label" parent="CanvasLayer" unique_id=1656066496]
+material = SubResource("ShaderMaterial_r5fkv")
+use_parent_material = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.5
+offset_top = -16.5
+offset_right = 250.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("19_u7ucq")
+theme_override_font_sizes/font_size = 64
+text = "Aperte a tecla B para investigar a ilha"
+metadata/_edit_use_anchors_ = true
+
+[node name="CaixaEnigma" type="Panel" parent="CanvasLayer" unique_id=1264731970]
+anchors_preset = -1
+anchor_left = 0.54
+anchor_top = 0.55300003
+anchor_right = 0.54
+anchor_bottom = 0.55300003
+offset_left = -536.80005
+offset_top = -247.24005
+offset_right = 463.19995
+offset_bottom = 52.75995
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(500, 150)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xwfau")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1501756401]
+material = SubResource("ShaderMaterial_xwfau")
+layout_mode = 0
+offset_left = 15.0
+offset_top = 26.0
+offset_right = 981.0
+offset_bottom = 263.0
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("19_u7ucq")
+theme_override_font_sizes/font_size = 36
+text = "As portas desta ilha são teimosas
+Cada caminho tem sua própria regra secreta 
+e exige apenas um detalhe específico para deixar alguém passar
+As portas não falam, mas as suas escolhas sim
+Preste atenção em quem é aceito e quem é rejeitado
+Formule sua ideia, faça o teste e desvende o padrão de cada caminho"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]
