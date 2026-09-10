@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm5pi545gk3ug"
-path="res://.godot/imported/Placa de caminho.png-cc712df6bbd531810b56ed8823ccfaf3.ctex"
+uid="uid://dou2yorpgd7wb"
+path="res://.godot/imported/Placa de caminho 1.png-e3efe84060eefeaf06deab29f843d8b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Placa de caminho.png"
-dest_files=["res://.godot/imported/Placa de caminho.png-cc712df6bbd531810b56ed8823ccfaf3.ctex"]
+source_file="res://sprites/Placa de caminho 1.png"
+dest_files=["res://.godot/imported/Placa de caminho 1.png-e3efe84060eefeaf06deab29f843d8b9.ctex"]
 
 [params]
 

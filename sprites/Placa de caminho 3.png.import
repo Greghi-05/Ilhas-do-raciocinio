@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwx2blpvgnmi1"
-path="res://.godot/imported/Gatinho 3.png-9f51926d295200a9d4a8764857d9e8d6.ctex"
+uid="uid://brmnvkf5b0vbn"
+path="res://.godot/imported/Placa de caminho 3.png-a984790fd6f6b6b16bfe740373c4582f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ilha 2/Gatinho 3.png"
-dest_files=["res://.godot/imported/Gatinho 3.png-9f51926d295200a9d4a8764857d9e8d6.ctex"]
+source_file="res://sprites/Placa de caminho 3.png"
+dest_files=["res://.godot/imported/Placa de caminho 3.png-a984790fd6f6b6b16bfe740373c4582f.ctex"]
 
 [params]
 

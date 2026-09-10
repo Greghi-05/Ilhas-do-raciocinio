@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dr0g5002py3ei"]
 
+[ext_resource type="Script" uid="uid://b1m27mkot5cio" path="res://scripts/level_up.gd" id="1_5hpc3"]
 [ext_resource type="Texture2D" uid="uid://y37544kgy74o" path="res://tiles/Tile set de outono.png" id="1_ov646"]
 [ext_resource type="Texture2D" uid="uid://cyi0mam3uv5aw" path="res://tiles/Water 2.jpg" id="1_vx7n1"]
 [ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="2_xehit"]
@@ -23,8 +24,12 @@
 [ext_resource type="Texture2D" uid="uid://cpi4tgilc3kmq" path="res://sprites/Ilha 3/Vaquinha 5.png" id="21_aa26q"]
 [ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="21_cwlun"]
 [ext_resource type="Texture2D" uid="uid://w774gi63njg" path="res://sprites/Ilha 3/Vaquinha 6.png" id="22_f3lyx"]
-[ext_resource type="Texture2D" uid="uid://bm5pi545gk3ug" path="res://sprites/Placa de caminho.png" id="22_wc5rq"]
 [ext_resource type="Texture2D" uid="uid://bghargapleb1y" path="res://sprites/Ilha 3/Vaquinha 7.png" id="23_cv1kw"]
+[ext_resource type="Texture2D" uid="uid://snuxbk00abiq" path="res://sprites/Placa de caminho 2 .png" id="26_5hpc3"]
+[ext_resource type="Shader" uid="uid://b260ekimk8ki0" path="res://scenes/level 1.gdshader" id="26_s0dx1"]
+[ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="27_5hpc3"]
+[ext_resource type="Texture2D" uid="uid://brmnvkf5b0vbn" path="res://sprites/Placa de caminho 3.png" id="27_udutw"]
+[ext_resource type="Texture2D" uid="uid://cblytuacyqo0k" path="res://sprites/Placa de caminho 4 .png" id="28_4fl4y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25uk8"]
 texture = ExtResource("1_ov646")
@@ -834,10 +839,133 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_njmyb"]
+atlas = ExtResource("26_5hpc3")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udutw"]
+atlas = ExtResource("26_5hpc3")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fl4y"]
+atlas = ExtResource("26_5hpc3")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4xdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njmyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udutw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fl4y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgum"]
-size = Vector2(176, 140)
+size = Vector2(276, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4xdn"]
+atlas = ExtResource("27_udutw")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t08ng"]
+atlas = ExtResource("27_udutw")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3b4g"]
+atlas = ExtResource("27_udutw")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lt578"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4xdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t08ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3b4g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp2ru"]
+atlas = ExtResource("28_4fl4y")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa26q"]
+atlas = ExtResource("28_4fl4y")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3lyx"]
+atlas = ExtResource("28_4fl4y")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cv1kw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp2ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa26q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3lyx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njmyb"]
+shader = ExtResource("26_s0dx1")
+shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
+shader_parameter/velocidade = 1.5
+shader_parameter/tamanho_faixa = 0.2
+shader_parameter/inclinacao = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udutw"]
+bg_color = Color(0.95686275, 0.9098039, 0.75686276, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.84313726, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.15686275)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4fl4y"]
+shader = ExtResource("26_s0dx1")
+shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
+shader_parameter/velocidade = 1.5
+shader_parameter/tamanho_faixa = 0.2
+shader_parameter/inclinacao = 0.5
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xwfau"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l4xdn"]
+noise = SubResource("FastNoiseLite_xwfau")
 
 [node name="Island_3" type="Node2D" unique_id=221937309]
+script = ExtResource("1_5hpc3")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=362271750]
 position = Vector2(960, 540)
@@ -1097,61 +1225,140 @@ frame_progress = 0.0
 position = Vector2(849, 88)
 script = ExtResource("21_cwlun")
 regra_do_caminho = "bota_especifica_sem_chapeu"
-espacamento_fila = Vector2(80, 0)
+espacamento_fila = Vector2(100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea" unique_id=2044823195]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea" unique_id=515914110]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(71, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("22_wc5rq")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_l4xdn")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea" unique_id=1321059463]
-position = Vector2(15, -8)
+position = Vector2(65, -8)
 shape = SubResource("RectangleShape2D_5xgum")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea" unique_id=161960848]
-position = Vector2(17, 60)
+position = Vector2(14, 65)
 
 [node name="GoalArea2" type="Area2D" parent="Caminhos" unique_id=1313978688]
 position = Vector2(136, 91)
 script = ExtResource("21_cwlun")
 regra_do_caminho = "qualquer_chapeu_sem_bota"
-espacamento_fila = Vector2(80, 0)
+espacamento_fila = Vector2(100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea2" unique_id=735294624]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea2" unique_id=694144249]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(68, -9)
 scale = Vector2(4, 4)
-texture = ExtResource("22_wc5rq")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_lt578")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea2" unique_id=1835320370]
-position = Vector2(15, -8)
+position = Vector2(72, -10)
 shape = SubResource("RectangleShape2D_5xgum")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea2" unique_id=990085726]
-position = Vector2(17, 60)
+position = Vector2(13, 63)
 
 [node name="GoalArea3" type="Area2D" parent="Caminhos" unique_id=1169893816]
 position = Vector2(1231, 615)
 script = ExtResource("21_cwlun")
 regra_do_caminho = "chapeu_restrito_com_bota"
-espacamento_fila = Vector2(80, 0)
+espacamento_fila = Vector2(100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea3" unique_id=1880831110]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea3" unique_id=1240250730]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(75, -7)
 scale = Vector2(4, 4)
-texture = ExtResource("22_wc5rq")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_cv1kw")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=2077170798]
-position = Vector2(15, -8)
+position = Vector2(73, -4)
 shape = SubResource("RectangleShape2D_5xgum")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea3" unique_id=1187471266]
-position = Vector2(87, 35)
+position = Vector2(21, 68)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=822072261]
+
+[node name="AvisoB" type="Label" parent="CanvasLayer" unique_id=150989213]
+material = SubResource("ShaderMaterial_njmyb")
+use_parent_material = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.5
+offset_top = -16.5
+offset_right = 250.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("27_5hpc3")
+theme_override_font_sizes/font_size = 64
+text = "Aperte a tecla B para investigar a ilha"
+metadata/_edit_use_anchors_ = true
+
+[node name="CaixaEnigma" type="Panel" parent="CanvasLayer" unique_id=733052403]
+anchors_preset = -1
+anchor_left = 0.54
+anchor_top = 0.55300003
+anchor_right = 0.54
+anchor_bottom = 0.55300003
+offset_left = -536.80005
+offset_top = -247.24005
+offset_right = 463.19995
+offset_bottom = 52.75995
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(500, 150)
+theme_override_styles/panel = SubResource("StyleBoxFlat_udutw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1808762536]
+material = SubResource("ShaderMaterial_4fl4y")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -138.5
+offset_right = 490.0
+offset_bottom = 138.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("27_5hpc3")
+theme_override_font_sizes/font_size = 36
+text = "As regras fáceis ficaram no passado. Bem-vindo à ilha dos rigorosos
+Para cruzar esta fronteira, apenas um acessório ou  cor não bastará
+Os caminhos agora julgam o conjunto da obra de quem tenta passar
+Preste atenção àqueles que quase acertaram:
+ Quem tinha um detalhe certo, mas falhou por esquecer o outro?
+Una as pistas e descubra os múltiplos segredos que o caminho exige"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CaixaEnigma" unique_id=780051955]
+modulate = Color(1, 1, 1, 0.09803922)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_l4xdn")
+expand_mode = 2
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

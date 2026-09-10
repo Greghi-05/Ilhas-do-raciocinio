@@ -17,9 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://b1f8o4w152un2" path="res://sprites/Ilha 1/Vaquinha 1.png" id="13_ygm7u"]
 [ext_resource type="Texture2D" uid="uid://duper5mrmsfhf" path="res://sprites/Ilha 1/Vaquinha 2 .png" id="14_7nk2b"]
 [ext_resource type="Script" uid="uid://ceknrnd8s4i5g" path="res://scripts/goal_area.gd" id="15_bxejt"]
-[ext_resource type="Texture2D" uid="uid://bm5pi545gk3ug" path="res://sprites/Placa de caminho.png" id="17_a1gjd"]
+[ext_resource type="Texture2D" uid="uid://snuxbk00abiq" path="res://sprites/Placa de caminho 2 .png" id="18_r5fkv"]
+[ext_resource type="Texture2D" uid="uid://dou2yorpgd7wb" path="res://sprites/Placa de caminho 1.png" id="18_xwfau"]
 [ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="19_u7ucq"]
 [ext_resource type="Shader" uid="uid://b260ekimk8ki0" path="res://scenes/level 1.gdshader" id="19_xwfau"]
+[ext_resource type="Texture2D" uid="uid://brmnvkf5b0vbn" path="res://sprites/Placa de caminho 3.png" id="20_odcxm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntc4i"]
 texture = ExtResource("1_m7v2g")
@@ -560,8 +562,95 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mopwt"]
+atlas = ExtResource("18_r5fkv")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odcxm"]
+atlas = ExtResource("18_r5fkv")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xr4j"]
+atlas = ExtResource("18_r5fkv")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_laj21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mopwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odcxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xr4j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7g4h"]
-size = Vector2(176, 140)
+size = Vector2(281, 147)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5vsw"]
+atlas = ExtResource("18_xwfau")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laj21"]
+atlas = ExtResource("18_xwfau")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dov25"]
+atlas = ExtResource("18_xwfau")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ygm7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5vsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laj21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dov25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygm7u"]
+atlas = ExtResource("20_odcxm")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nk2b"]
+atlas = ExtResource("20_odcxm")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxejt"]
+atlas = ExtResource("20_odcxm")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w6g1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygm7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nk2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxejt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r5fkv"]
 shader = ExtResource("19_xwfau")
@@ -582,8 +671,9 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-shadow_color = Color(0, 0, 0, 0.5882353)
-shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.15686275)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xwfau"]
 shader = ExtResource("19_xwfau")
@@ -591,6 +681,11 @@ shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
 shader_parameter/velocidade = 1.5
 shader_parameter/tamanho_faixa = 0.2
 shader_parameter/inclinacao = 0.5
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r5fkv"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r5fkv"]
+noise = SubResource("FastNoiseLite_r5fkv")
 
 [node name="Island_1" type="Node2D" unique_id=2110042322]
 script = ExtResource("1_a1gjd")
@@ -789,59 +884,60 @@ position = Vector2(1132, 604)
 script = ExtResource("15_bxejt")
 espacamento_fila = Vector2(80, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea" unique_id=513785295]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea" unique_id=1538111827]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(76, 3)
 scale = Vector2(4, 4)
-texture = ExtResource("17_a1gjd")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_laj21")
+autoplay = "default"
+frame_progress = 0.47284743
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea" unique_id=2037738812]
-position = Vector2(15, -8)
+position = Vector2(71.5, -4.5)
 shape = SubResource("RectangleShape2D_g7g4h")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea" unique_id=1067976938]
 position = Vector2(17, 60)
 
 [node name="GoalArea2" type="Area2D" parent="Caminhos" unique_id=898011325]
-position = Vector2(129, 172)
+position = Vector2(187, 134)
 script = ExtResource("15_bxejt")
 regra_do_caminho = "tem_chapeu"
-espacamento_fila = Vector2(80, 0)
+espacamento_fila = Vector2(100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea2" unique_id=1222649526]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea2" unique_id=236904510]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(11, -6)
 scale = Vector2(4, 4)
-texture = ExtResource("17_a1gjd")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_ygm7u")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea2" unique_id=1734982184]
-position = Vector2(15, -8)
+position = Vector2(18, -8)
 shape = SubResource("RectangleShape2D_g7g4h")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea2" unique_id=1974567717]
-position = Vector2(17, 60)
+position = Vector2(-44, 68)
 
 [node name="GoalArea3" type="Area2D" parent="Caminhos" unique_id=1164240138]
-position = Vector2(1389, 319)
+position = Vector2(1436, 326)
 script = ExtResource("15_bxejt")
 regra_do_caminho = "tem_oculos"
-espacamento_fila = Vector2(80, 0)
+espacamento_fila = Vector2(90, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Caminhos/GoalArea3" unique_id=1051513355]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Caminhos/GoalArea3" unique_id=1804835171]
 texture_filter = 1
-position = Vector2(15, -8)
+position = Vector2(16, -8)
 scale = Vector2(4, 4)
-texture = ExtResource("17_a1gjd")
-region_rect = Rect2(16, 48, 16, 16)
+sprite_frames = SubResource("SpriteFrames_4w6g1")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=1801481656]
-position = Vector2(15, -8)
+position = Vector2(24, -7)
 shape = SubResource("RectangleShape2D_g7g4h")
 
 [node name="Marker2D" type="Marker2D" parent="Caminhos/GoalArea3" unique_id=2007873155]
-position = Vector2(17, 60)
+position = Vector2(-40, 68)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=134663702]
 
@@ -904,6 +1000,17 @@ Formule sua ideia, faça o teste e desvende o padrão de cada caminho"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CaixaEnigma" unique_id=1891944088]
+modulate = Color(1, 1, 1, 0.09803922)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_r5fkv")
+expand_mode = 2
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]
