@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pmggh7obymd7"
-path="res://.godot/imported/Gatinho 4.png-72c52746482a17ce0418ba7d25a99b82.ctex"
+uid="uid://ckx7xsiw2qkp7"
+path="res://.godot/imported/Gatinho 3.8.png-72e438280c9ff0fde09282950737f199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ilha 2/Gatinho 4.png"
-dest_files=["res://.godot/imported/Gatinho 4.png-72c52746482a17ce0418ba7d25a99b82.ctex"]
+source_file="res://sprites/Ilha 2/Gatinho 3.8.png"
+dest_files=["res://.godot/imported/Gatinho 3.8.png-72e438280c9ff0fde09282950737f199.ctex"]
 
 [params]
 

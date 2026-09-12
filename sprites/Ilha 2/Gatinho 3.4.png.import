@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dplaldpirw8e5"
-path="res://.godot/imported/Ursinho 4.png-08f692adfc28eaca76eed9bb16329761.ctex"
+uid="uid://b3vumqhsh7m0f"
+path="res://.godot/imported/Gatinho 3.4.png-b1dd557c726a40faf844236308c0a728.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ilha 2/Ursinho 4.png"
-dest_files=["res://.godot/imported/Ursinho 4.png-08f692adfc28eaca76eed9bb16329761.ctex"]
+source_file="res://sprites/Ilha 2/Gatinho 3.4.png"
+dest_files=["res://.godot/imported/Gatinho 3.4.png-b1dd557c726a40faf844236308c0a728.ctex"]
 
 [params]
 
