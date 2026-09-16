@@ -12,7 +12,9 @@ extends Area2D
 	# ILHA 3
 	"bota_especifica_sem_chapeu",
 	"qualquer_chapeu_sem_bota",
-	"chapeu_restrito_com_bota"
+	"chapeu_restrito_com_bota",
+	# ILHA 4
+	"vermelho_e_bota"
 ) var regra_do_caminho: String = "apenas_porco"
 
 @export var espacamento_fila: Vector2 = Vector2(60, 0) 
@@ -79,6 +81,20 @@ func validar_personagem(body) -> bool:
 			
 	elif regra_do_caminho == "chapeu_restrito_com_bota":
 		if body.usa_chapeu == true and (body.cor_chapeu == "roxo" or body.cor_chapeu == "vermelho") and body.usa_sapato == true:
+			return true
+		else:
+			return false
+			
+	# REGRAS DA ILHA 4
+	elif regra_do_caminho == "vermelho_e_bota":
+		var condicao_bota = body.usa_sapato
+		var condicao_vermelho = false
+		
+		if (body.usa_sapato and body.cor_sapato == "vermelho"): condicao_vermelho = true
+		elif (body.usa_chapeu and body.cor_chapeu == "vermelho"): condicao_vermelho = true
+		elif (body.usa_oculos and body.cor_oculos == "vermelho"): condicao_vermelho = true
+			
+		if condicao_bota == true and condicao_vermelho == true:
 			return true
 		else:
 			return false
