@@ -933,6 +933,7 @@ sprite_frames = SubResource("SpriteFrames_4w6g1")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caminhos/GoalArea3" unique_id=1801481656]
+visible = false
 position = Vector2(24, -7)
 shape = SubResource("RectangleShape2D_g7g4h")
 

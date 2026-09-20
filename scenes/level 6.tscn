@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6qyqe4rgmogx"]
+
+[ext_resource type="Texture2D" uid="uid://psna35caariw" path="res://tiles/Water 3.jpg" id="1_kwd5j"]
+
+[node name="Island_6" type="Node2D" unique_id=1359220664]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2012899805]
+position = Vector2(960, 540)
+scale = Vector2(0.69, 0.71)
+texture = ExtResource("1_kwd5j")

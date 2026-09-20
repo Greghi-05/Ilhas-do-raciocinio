@@ -40,15 +40,32 @@ func _input(event):
 			
 			if caminho_atual != null:
 				if caminho_atual.validar_personagem(self) == true:
-					global_position = caminho_atual.entrar_na_fila()
 					foi_resolvido = true 
+					var posicao_destino = caminho_atual.entrar_na_fila()
+					
+					var tween = create_tween()
+					tween.set_trans(Tween.TRANS_SINE)
+					tween.set_ease(Tween.EASE_IN_OUT)
+					tween.tween_property(self, "global_position", posicao_destino, 0.6)
+					
 					print(especie, " passou no caminho e entrou na fila!")
 					get_tree().current_scene.registrar_acerto()
+					
 				else:
-					global_position = posicao_inicial
+					
+					var tween_erro = create_tween()
+					tween_erro.set_trans(Tween.TRANS_ELASTIC)
+					tween_erro.set_ease(Tween.EASE_OUT)
+					tween_erro.tween_property(self, "global_position", posicao_inicial, 0.5)
+					
 					print(especie, " foi rejeitado!")
+					
 			else:
-				global_position = posicao_inicial
+				
+				var tween_fora = create_tween()
+				tween_fora.set_trans(Tween.TRANS_ELASTIC)
+				tween_fora.set_ease(Tween.EASE_OUT)
+				tween_fora.tween_property(self, "global_position", posicao_inicial, 0.5)
 
 func _physics_process(delta):
 	if esta_arrastando:
