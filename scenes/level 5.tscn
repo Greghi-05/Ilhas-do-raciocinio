@@ -989,10 +989,10 @@ shader_parameter/velocidade = 1.5
 shader_parameter/tamanho_faixa = 0.2
 shader_parameter/inclinacao = 0.5
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_xwfau"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_b0ro2"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bxfot"]
-noise = SubResource("FastNoiseLite_xwfau")
+noise = SubResource("FastNoiseLite_b0ro2")
 
 [node name="Island_5" type="Node2D" unique_id=575971054]
 script = ExtResource("1_b0ro2")
