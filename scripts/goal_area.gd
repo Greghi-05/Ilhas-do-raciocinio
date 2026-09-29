@@ -18,7 +18,9 @@ extends Area2D
 	# ILHA 5
 	"ou_exclusivo_bota_chapeu",
 	# ILHA 6
-	"ilha6_espelho"
+	"ilha6_espelho",
+	# ILHA 7
+	"impostor_azul"
 ) var regra_do_caminho: String = "apenas_porco"
 
 @export var personagem_referencia: Node2D 
@@ -117,17 +119,13 @@ func validar_personagem(body) -> bool:
 
 	# REGRAS DA ILHA 6 (O Espelho Lógico)
 	elif regra_do_caminho == "ilha6_espelho":
-		# O script agora aceita a referência instanciada como Node2D
 		if personagem_referencia != null:
-			
-			# REGRA 1: Se a referência usa CHAPÉU, o jogador precisa soltar alguém com BOTA da MESMA COR
 			if personagem_referencia.usa_chapeu == true:
 				if body.usa_sapato == true and body.cor_sapato == personagem_referencia.cor_chapeu:
 					return true
 				else:
 					return false
 					
-			# REGRA 2: Se a referência usa ÓCULOS, o jogador precisa soltar alguém com CHAPÉU (qualquer cor)
 			elif personagem_referencia.usa_oculos == true:
 				if body.usa_chapeu == true:
 					return true
@@ -135,6 +133,13 @@ func validar_personagem(body) -> bool:
 					return false
 					
 		return false
+		
+	# REGRAS DA ILHA 7
+	elif regra_do_caminho == "impostor_azul":
+		if body.usa_sapato == true and body.cor_sapato == "azul" and body.usa_chapeu == true and body.cor_chapeu == "azul":
+			return true
+		else:
+			return false
 			
 	return false 
 

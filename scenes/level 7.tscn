@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://ba5jfjtwvidy1"]
 
 [ext_resource type="Texture2D" uid="uid://crn1gfvuabhmb" path="res://tiles/Water 4.jpg" id="1_1s4fh"]
+[ext_resource type="Script" uid="uid://b1m27mkot5cio" path="res://scripts/level_up.gd" id="1_uvcfi"]
 [ext_resource type="Texture2D" uid="uid://y37544kgy74o" path="res://tiles/Tile set de outono.png" id="2_vj2gt"]
 [ext_resource type="Texture2D" uid="uid://hlfd8e8hrd5" path="res://tiles/Tile set de novembro.png" id="3_uvcfi"]
 [ext_resource type="Texture2D" uid="uid://cxqp0u17q46ke" path="res://tiles/Autotile_Grass_and_Dirt_Path_Tileset.png" id="4_mtl70"]
@@ -528,6 +529,9 @@ sources/1 = SubResource("TileSetAtlasSource_imwf5")
 sources/2 = SubResource("TileSetAtlasSource_la8s3")
 
 [node name="Island_7" type="Node2D" unique_id=874790289]
+script = ExtResource("1_uvcfi")
+personagens_necessarios = 1
+proxima_fase = ""
 
 [node name="Background" type="Sprite2D" parent="." unique_id=496104215]
 position = Vector2(960, 540)
