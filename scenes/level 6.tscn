@@ -819,10 +819,10 @@ shader_parameter/velocidade = 1.5
 shader_parameter/tamanho_faixa = 0.2
 shader_parameter/inclinacao = 0.5
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_xwfau"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yvduf"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q361o"]
-noise = SubResource("FastNoiseLite_xwfau")
+noise = SubResource("FastNoiseLite_yvduf")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yogo6"]
 size = Vector2(67, 72)
@@ -1433,7 +1433,6 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=187195630]
-visible = false
 
 [node name="AvisoB" type="Label" parent="CanvasLayer" unique_id=232874642]
 material = SubResource("ShaderMaterial_gxa77")
