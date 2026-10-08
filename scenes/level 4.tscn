@@ -31,6 +31,7 @@
 [ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="26_1ueee"]
 [ext_resource type="Texture2D" uid="uid://bq2qbntl1vhc8" path="res://sprites/Ilha 4/Vaquinha 10.png" id="26_l2vbl"]
 [ext_resource type="Texture2D" uid="uid://bgohfc8f8be5f" path="res://sprites/Ponte fase 4 real oficial.png" id="29_l2vbl"]
+[ext_resource type="AudioStream" uid="uid://qnm1k1633sqp" path="res://sounds/fall.mp3" id="32_w1qk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bl6x6"]
 texture = ExtResource("2_in3ey")
@@ -982,13 +983,6 @@ shadow_color = Color(0, 0, 0, 0.15686275)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kein7"]
-shader = ExtResource("25_ynkam")
-shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
-shader_parameter/velocidade = 1.5
-shader_parameter/tamanho_faixa = 0.2
-shader_parameter/inclinacao = 0.5
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_l2vbl"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7pqk2"]
@@ -1363,7 +1357,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_371da")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=518335607]
-material = SubResource("ShaderMaterial_kein7")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1401,6 +1394,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("NoiseTexture2D_7pqk2")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1044224012]
+stream = ExtResource("32_w1qk5")
+volume_db = -30.0
+autoplay = true
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

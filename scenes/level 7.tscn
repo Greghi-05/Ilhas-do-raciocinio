@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://snuxbk00abiq" path="res://sprites/Placa de caminho 2 .png" id="32_bs6iu"]
 [ext_resource type="Shader" uid="uid://b260ekimk8ki0" path="res://scenes/level 1.gdshader" id="33_tvghh"]
 [ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="34_ok4gg"]
+[ext_resource type="AudioStream" uid="uid://cijf7cx7f7686" path="res://sounds/winter.ogg" id="35_ok4gg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hphab"]
 texture = ExtResource("2_vj2gt")
@@ -1128,13 +1129,6 @@ shadow_color = Color(0, 0, 0, 0.15686275)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_adrpf"]
-shader = ExtResource("33_tvghh")
-shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
-shader_parameter/velocidade = 1.5
-shader_parameter/tamanho_faixa = 0.2
-shader_parameter/inclinacao = 0.5
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_xwfau"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rcx5p"]
@@ -1524,7 +1518,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_i8wtk")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1698757165]
-material = SubResource("ShaderMaterial_adrpf")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1562,6 +1555,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("NoiseTexture2D_rcx5p")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=193158806]
+stream = ExtResource("35_ok4gg")
+volume_db = -30.0
+autoplay = true
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

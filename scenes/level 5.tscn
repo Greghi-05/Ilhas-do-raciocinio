@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://dqxrmb416dwy8" path="res://sprites/Ilha 5/Vaquinha 11.png" id="24_yplh5"]
 [ext_resource type="Texture2D" uid="uid://djb6dmgjp4qdx" path="res://sprites/Ilha 5/Vaquinha 12.png" id="25_vnex5"]
 [ext_resource type="Texture2D" uid="uid://b6qc6puadh5wr" path="res://sprites/Ilha 5/Vaquinha 13.png" id="26_xqy3q"]
+[ext_resource type="AudioStream" uid="uid://qnm1k1633sqp" path="res://sounds/fall.mp3" id="32_l4y1l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ok6b5"]
 texture = ExtResource("2_6kcm4")
@@ -982,13 +983,6 @@ shadow_color = Color(0, 0, 0, 0.15686275)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pc85o"]
-shader = ExtResource("11_e36v3")
-shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
-shader_parameter/velocidade = 1.5
-shader_parameter/tamanho_faixa = 0.2
-shader_parameter/inclinacao = 0.5
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_b0ro2"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bxfot"]
@@ -1359,7 +1353,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_35n5e")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1280044279]
-material = SubResource("ShaderMaterial_pc85o")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1397,6 +1390,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("NoiseTexture2D_bxfot")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1349792760]
+stream = ExtResource("32_l4y1l")
+volume_db = -30.0
+autoplay = true
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

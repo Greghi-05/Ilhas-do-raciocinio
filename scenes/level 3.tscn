@@ -30,6 +30,7 @@
 [ext_resource type="FontFile" uid="uid://b56ito51mv1ou" path="res://fonts/VT323-Regular.ttf" id="27_5hpc3"]
 [ext_resource type="Texture2D" uid="uid://brmnvkf5b0vbn" path="res://sprites/Placa de caminho 3.png" id="27_udutw"]
 [ext_resource type="Texture2D" uid="uid://cblytuacyqo0k" path="res://sprites/Placa de caminho 4 .png" id="28_4fl4y"]
+[ext_resource type="AudioStream" uid="uid://qnm1k1633sqp" path="res://sounds/fall.mp3" id="31_4fl4y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25uk8"]
 texture = ExtResource("1_ov646")
@@ -1360,6 +1361,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("NoiseTexture2D_l4xdn")
 expand_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1996064228]
+stream = ExtResource("31_4fl4y")
+volume_db = -30.0
+autoplay = true
 
 [editable path="Characters/Character"]
 [editable path="Characters/Character2"]

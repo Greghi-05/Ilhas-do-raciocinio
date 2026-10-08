@@ -20,7 +20,11 @@ extends Area2D
 	# ILHA 6
 	"ilha6_espelho",
 	# ILHA 7
-	"impostor_azul"
+	"impostor_azul",
+	# DESAFIOS FINAIS (ILHA 8)
+	"desafio_final_xor_gato_oculos",
+	"desafio_final_espelho_trocado",
+	"desafio_final_impostor_discreto"
 ) var regra_do_caminho: String = "apenas_porco"
 
 @export var personagem_referencia: Node2D 
@@ -28,9 +32,18 @@ extends Area2D
 @export var espacamento_fila: Vector2 = Vector2(60, 0) 
 var quantidade_na_fila: int = 0 
 
+var arquivo_som_falha = preload("res://sounds/sound effects/fail sound.wav") 
+
+var tocador_de_som: AudioStreamPlayer2D
+
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	
+	tocador_de_som = AudioStreamPlayer2D.new()
+	tocador_de_som.stream = arquivo_som_falha
+	tocador_de_som.volume_db = -20.0
+	add_child(tocador_de_som)
 
 func _on_body_entered(body):
 	if "caminho_atual" in body:
@@ -41,21 +54,23 @@ func _on_body_exited(body):
 		body.caminho_atual = null 
 
 func validar_personagem(body) -> bool:
+	# Variável que guarda a resposta final
+	var resultado: bool = false
 	
 	# REGRAS DA ILHA 1
 	if regra_do_caminho == "apenas_porco" and body.especie == "porco":
-		return true
+		resultado = true
 	elif regra_do_caminho == "tem_chapeu" and body.usa_chapeu == true:
-		return true
+		resultado = true
 	elif regra_do_caminho == "tem_oculos" and body.usa_oculos == true:
-		return true
+		resultado = true
 		
 	# REGRAS DA ILHA 2
 	elif regra_do_caminho == "nao_aceita_oculos":
 		if body.usa_oculos == true:
-			return false 
+			resultado = false 
 		else:
-			return true  
+			resultado = true  
 			
 	elif regra_do_caminho == "nao_aceita_verde":
 		var tem_item_verde = false
@@ -64,34 +79,34 @@ func validar_personagem(body) -> bool:
 		if body.usa_chapeu and body.cor_chapeu == "verde": tem_item_verde = true
 		
 		if tem_item_verde:
-			return false 
+			resultado = false 
 		else:
-			return true  
+			resultado = true  
 			
 	elif regra_do_caminho == "nao_aceita_felinos":
 		if body.especie == "gato":
-			return false 
+			resultado = false 
 		else:
-			return true  
+			resultado = true  
 
 	# REGRAS DA ILHA 3  
 	elif regra_do_caminho == "bota_especifica_sem_chapeu":
 		if body.usa_sapato == true and body.cor_sapato != "verde" and body.cor_sapato != "azul" and body.usa_chapeu == false:
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 			
 	elif regra_do_caminho == "qualquer_chapeu_sem_bota":
 		if body.usa_chapeu == true and body.usa_sapato == false:
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 			
 	elif regra_do_caminho == "chapeu_restrito_com_bota":
 		if body.usa_chapeu == true and (body.cor_chapeu == "roxo" or body.cor_chapeu == "vermelho") and body.usa_sapato == true:
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 			
 	# REGRAS DA ILHA 4
 	elif regra_do_caminho == "vermelho_e_bota":
@@ -103,9 +118,9 @@ func validar_personagem(body) -> bool:
 		elif (body.usa_oculos and body.cor_oculos == "vermelho"): condicao_vermelho = true
 			
 		if condicao_bota == true and condicao_vermelho == true:
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 
 	# REGRAS DA ILHA 5 
 	elif regra_do_caminho == "ou_exclusivo_bota_chapeu":
@@ -113,35 +128,75 @@ func validar_personagem(body) -> bool:
 		var tem_chapeu = body.usa_chapeu
 		
 		if tem_bota != tem_chapeu:
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 
 	# REGRAS DA ILHA 6 (O Espelho Lógico)
 	elif regra_do_caminho == "ilha6_espelho":
 		if personagem_referencia != null:
 			if personagem_referencia.usa_chapeu == true:
 				if body.usa_sapato == true and body.cor_sapato == personagem_referencia.cor_chapeu:
-					return true
+					resultado = true
 				else:
-					return false
+					resultado = false
 					
 			elif personagem_referencia.usa_oculos == true:
 				if body.usa_chapeu == true:
-					return true
+					resultado = true
 				else:
-					return false
-					
-		return false
+					resultado = false
+		else:
+			resultado = false
 		
 	# REGRAS DA ILHA 7
 	elif regra_do_caminho == "impostor_azul":
 		if body.usa_sapato == true and body.cor_sapato == "azul" and body.usa_chapeu == true and body.cor_chapeu == "azul":
-			return true
+			resultado = true
 		else:
-			return false
+			resultado = false
 			
-	return false 
+	# DESAFIOS FINAIS (ILHA 8)
+	# Desafio Final A
+	elif regra_do_caminho == "desafio_final_xor_gato_oculos":
+		var e_gato = (body.especie == "gato")
+		var tem_oculos = body.usa_oculos
+		if e_gato != tem_oculos:
+			resultado = true
+		else:
+			resultado = false
+
+	# Desafio Final B
+	elif regra_do_caminho == "desafio_final_espelho_trocado":
+		if personagem_referencia != null:
+			if personagem_referencia.usa_sapato == true:
+				if body.usa_chapeu == true and body.cor_chapeu == personagem_referencia.cor_sapato:
+					resultado = true
+				else:
+					resultado = false
+			elif personagem_referencia.usa_oculos == true:
+				if body.especie == "porco":
+					resultado = true
+				else:
+					resultado = false
+		else:
+			resultado = false
+
+	# Desafio Final C
+	elif regra_do_caminho == "desafio_final_impostor_discreto":
+		if body.usa_chapeu == false and body.usa_oculos == true and body.usa_sapato == true:
+			if body.cor_oculos == body.cor_sapato:
+				resultado = true
+			else:
+				resultado = false
+		else:
+			resultado = false
+			
+	# Som de erro
+	if resultado == false:
+		tocador_de_som.play()
+		
+	return resultado 
 
 func entrar_na_fila() -> Vector2:
 	var posicao_final = $Marker2D.global_position + (espacamento_fila * quantidade_na_fila)

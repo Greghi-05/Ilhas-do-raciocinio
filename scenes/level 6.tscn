@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cp7m2a5jptn4g" path="res://sprites/Ilha 6/D6.png" id="38_yvduf"]
 [ext_resource type="Texture2D" uid="uid://c71qonakyxbqo" path="res://sprites/Ilha 6/D7.png" id="39_0dluf"]
 [ext_resource type="Texture2D" uid="uid://by6fqfo3w3lnf" path="res://sprites/Ilha 6/D8.png" id="40_3gknv"]
+[ext_resource type="AudioStream" uid="uid://cijf7cx7f7686" path="res://sounds/winter.ogg" id="41_0dluf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q46us"]
 texture = ExtResource("2_3fcy3")
@@ -812,13 +813,6 @@ shadow_color = Color(0, 0, 0, 0.15686275)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_syr62"]
-shader = ExtResource("20_0wlk2")
-shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
-shader_parameter/velocidade = 1.5
-shader_parameter/tamanho_faixa = 0.2
-shader_parameter/inclinacao = 0.5
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_yvduf"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q361o"]
@@ -1473,7 +1467,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yogo6")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1565378034]
-material = SubResource("ShaderMaterial_syr62")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1840,6 +1833,11 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_brgto")
 autoplay = "idle"
 frame_progress = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=907823074]
+stream = ExtResource("41_0dluf")
+volume_db = -30.0
+autoplay = true
 
 [editable path="Refs/Ref"]
 [editable path="Refs/Ref2"]
