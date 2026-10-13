@@ -24,7 +24,7 @@ extends Area2D
 	# DESAFIOS FINAIS (ILHA 8)
 	"desafio_final_xor_gato_oculos",
 	"desafio_final_espelho_trocado",
-	"desafio_final_impostor_discreto"
+	"desafio_final_impostor_oculos"
 ) var regra_do_caminho: String = "apenas_porco"
 
 @export var personagem_referencia: Node2D 
@@ -33,7 +33,6 @@ extends Area2D
 var quantidade_na_fila: int = 0 
 
 var arquivo_som_falha = preload("res://sounds/sound effects/fail sound.wav") 
-
 var tocador_de_som: AudioStreamPlayer2D
 
 func _ready():
@@ -54,7 +53,6 @@ func _on_body_exited(body):
 		body.caminho_atual = null 
 
 func validar_personagem(body) -> bool:
-	# Variável que guarda a resposta final
 	var resultado: bool = false
 	
 	# REGRAS DA ILHA 1
@@ -126,7 +124,6 @@ func validar_personagem(body) -> bool:
 	elif regra_do_caminho == "ou_exclusivo_bota_chapeu":
 		var tem_bota = body.usa_sapato
 		var tem_chapeu = body.usa_chapeu
-		
 		if tem_bota != tem_chapeu:
 			resultado = true
 		else:
@@ -140,7 +137,6 @@ func validar_personagem(body) -> bool:
 					resultado = true
 				else:
 					resultado = false
-					
 			elif personagem_referencia.usa_oculos == true:
 				if body.usa_chapeu == true:
 					resultado = true
@@ -157,7 +153,8 @@ func validar_personagem(body) -> bool:
 			resultado = false
 			
 	# DESAFIOS FINAIS (ILHA 8)
-	# Desafio Final A
+	
+	# Regra 1
 	elif regra_do_caminho == "desafio_final_xor_gato_oculos":
 		var e_gato = (body.especie == "gato")
 		var tem_oculos = body.usa_oculos
@@ -166,33 +163,32 @@ func validar_personagem(body) -> bool:
 		else:
 			resultado = false
 
-	# Desafio Final B
+	# Regra 2
 	elif regra_do_caminho == "desafio_final_espelho_trocado":
 		if personagem_referencia != null:
 			if personagem_referencia.usa_sapato == true:
-				if body.usa_chapeu == true and body.cor_chapeu == personagem_referencia.cor_sapato:
+				if body.especie == personagem_referencia.especie and body.usa_chapeu == true and body.cor_chapeu == personagem_referencia.cor_sapato:
 					resultado = true
 				else:
 					resultado = false
 			elif personagem_referencia.usa_oculos == true:
-				if body.especie == "porco":
+				if body.especie == personagem_referencia.especie and body.usa_chapeu == false and body.usa_oculos == false and body.usa_sapato == false:
 					resultado = true
 				else:
 					resultado = false
 		else:
 			resultado = false
 
-	# Desafio Final C
-	elif regra_do_caminho == "desafio_final_impostor_discreto":
-		if body.usa_chapeu == false and body.usa_oculos == true and body.usa_sapato == true:
-			if body.cor_oculos == body.cor_sapato:
+	# Regra 3
+	elif regra_do_caminho == "desafio_final_impostor_oculos":
+		if body.usa_chapeu == true and body.usa_sapato == true and body.cor_chapeu != body.cor_sapato:
+			if body.usa_oculos == true and body.cor_oculos != "azul":
 				resultado = true
 			else:
 				resultado = false
 		else:
 			resultado = false
 			
-	# Som de erro
 	if resultado == false:
 		tocador_de_som.play()
 		
