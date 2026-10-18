@@ -41,6 +41,9 @@ func _input(event):
 			if caminho_atual != null:
 				if caminho_atual.validar_personagem(self) == true:
 					foi_resolvido = true 
+				
+					$CollisionShape2D.set_deferred("disabled", true)
+
 					var posicao_destino = caminho_atual.entrar_na_fila()
 					
 					var tween = create_tween()

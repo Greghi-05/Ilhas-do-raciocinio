@@ -54,7 +54,7 @@ func _on_body_exited(body):
 
 func validar_personagem(body) -> bool:
 	var resultado: bool = false
-	
+
 	# REGRAS DA ILHA 1
 	if regra_do_caminho == "apenas_porco" and body.especie == "porco":
 		resultado = true

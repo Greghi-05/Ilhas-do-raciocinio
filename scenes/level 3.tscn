@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cblytuacyqo0k" path="res://sprites/Placa de caminho 4 .png" id="28_4fl4y"]
 [ext_resource type="AudioStream" uid="uid://qnm1k1633sqp" path="res://sounds/fall.mp3" id="31_4fl4y"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25uk8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fl4y"]
 texture = ExtResource("1_ov646")
 1:1/0 = 0
 2:1/0 = 0
@@ -103,7 +103,7 @@ texture = ExtResource("1_ov646")
 18:4/0 = 0
 19:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8iwgn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4xdn"]
 texture = ExtResource("2_xehit")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -248,10 +248,10 @@ texture = ExtResource("2_xehit")
 
 [sub_resource type="TileSet" id="TileSet_u65e0"]
 physics_layer_0/collision_layer = 1
-sources/4 = SubResource("TileSetAtlasSource_8iwgn")
-sources/0 = SubResource("TileSetAtlasSource_25uk8")
+sources/4 = SubResource("TileSetAtlasSource_l4xdn")
+sources/0 = SubResource("TileSetAtlasSource_4fl4y")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a3576"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t08ng"]
 texture = ExtResource("3_vx7n1")
 1:1/0 = 0
 2:1/0 = 0
@@ -278,7 +278,7 @@ texture = ExtResource("3_vx7n1")
 6:2/0 = 0
 7:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhb4s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3b4g"]
 texture = ExtResource("3_t6aj8")
 1:1/0 = 0
 1:2/0 = 0
@@ -311,10 +311,10 @@ texture = ExtResource("3_t6aj8")
 tile_size = Vector2i(13, 13)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_priority = 3.0
-sources/4 = SubResource("TileSetAtlasSource_qhb4s")
-sources/1 = SubResource("TileSetAtlasSource_a3576")
+sources/4 = SubResource("TileSetAtlasSource_d3b4g")
+sources/1 = SubResource("TileSetAtlasSource_t08ng")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qtmft"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lt578"]
 texture = ExtResource("4_tpis2")
 2:1/0 = 0
 3:1/0 = 0
@@ -357,7 +357,7 @@ texture = ExtResource("4_tpis2")
 2:5/size_in_atlas = Vector2i(2, 2)
 2:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iquks"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp2ru"]
 texture = ExtResource("7_25uk8")
 10:3/0 = 0
 11:3/0 = 0
@@ -402,8 +402,8 @@ texture = ExtResource("7_25uk8")
 
 [sub_resource type="TileSet" id="TileSet_mvdev"]
 tile_size = Vector2i(16, 13)
-sources/0 = SubResource("TileSetAtlasSource_qtmft")
-sources/1 = SubResource("TileSetAtlasSource_iquks")
+sources/0 = SubResource("TileSetAtlasSource_lt578")
+sources/1 = SubResource("TileSetAtlasSource_tp2ru")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgofo"]
 atlas = ExtResource("9_tpis2")
@@ -953,17 +953,10 @@ shadow_color = Color(0, 0, 0, 0.15686275)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4fl4y"]
-shader = ExtResource("26_s0dx1")
-shader_parameter/cor_do_brilho = Color(1, 1, 1, 0.8)
-shader_parameter/velocidade = 1.5
-shader_parameter/tamanho_faixa = 0.2
-shader_parameter/inclinacao = 0.5
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_xwfau"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_aa26q"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l4xdn"]
-noise = SubResource("FastNoiseLite_xwfau")
+noise = SubResource("FastNoiseLite_aa26q")
 
 [node name="Island_3" type="Node2D" unique_id=221937309]
 script = ExtResource("1_5hpc3")
@@ -1324,7 +1317,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_udutw")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/CaixaEnigma" unique_id=1808762536]
-material = SubResource("ShaderMaterial_4fl4y")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
