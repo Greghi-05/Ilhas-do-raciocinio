@@ -864,6 +864,7 @@ noise = SubResource("FastNoiseLite_xwfau")
 [node name="Island_9" type="Node2D" unique_id=1777941233]
 script = ExtResource("1_o06c0")
 personagens_necessarios = 9
+proxima_fase = "res://scenes/game win.tscn"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1271220867]
 position = Vector2(960, 540)

@@ -191,7 +191,7 @@ func validar_personagem(body) -> bool:
 			
 	if resultado == false:
 		tocador_de_som.play()
-		
+		Monitoramento.registrar_erro()
 	return resultado 
 
 func entrar_na_fila() -> Vector2:

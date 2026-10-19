@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Ilha do raciocinio"
-run/main_scene="uid://373suwe7143e"
+run/main_scene="uid://bsbya1t7gl2c3"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+Monitoramento="*uid://cqws2dj60gn08"
 
 [display]
 
