@@ -12,13 +12,16 @@ func _ready():
 	btn_fase11.pressed.connect(_ir_para_fase11)
 
 func _ir_para_fase9():
+	Monitoramento.fechar_tempo_fase_atual()
 	Monitoramento.registrar_escolha("Regras Ocultas")
 	get_tree().change_scene_to_file("res://scenes/level 9.tscn") # Ajuste o caminho
 
 func _ir_para_fase10():
+	Monitoramento.fechar_tempo_fase_atual()
 	Monitoramento.registrar_escolha("Espelho")
 	get_tree().change_scene_to_file("res://scenes/level 10.tscn") # Ajuste o caminho
 
 func _ir_para_fase11():
+	Monitoramento.fechar_tempo_fase_atual()
 	Monitoramento.registrar_escolha("Impostor")
 	get_tree().change_scene_to_file("res://scenes/level 11.tscn") # Ajuste o caminho
